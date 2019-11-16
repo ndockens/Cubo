@@ -1,0 +1,93 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "Cubo.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/Cubo.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Cubo.Core.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Cubo.Core/1.0.0": {
+      "type": "project",
+      "path": "../Cubo.Core/Cubo.Core.csproj",
+      "msbuildProject": "../Cubo.Core/Cubo.Core.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.0": [
+      "Cubo.Core >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "/Users/Nathan/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "/Users/Nathan/Projects/Cubo/src/Cubo.Api/Cubo.Api.csproj",
+      "projectName": "Cubo.Api",
+      "projectPath": "/Users/Nathan/Projects/Cubo/src/Cubo.Api/Cubo.Api.csproj",
+      "packagesPath": "/Users/Nathan/.nuget/packages/",
+      "outputPath": "/Users/Nathan/Projects/Cubo/src/Cubo.Api/obj/",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "/Users/Nathan/.nuget/NuGet/NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.0"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "projectReferences": {
+            "/Users/Nathan/Projects/Cubo/src/Cubo.Core/Cubo.Core.csproj": {
+              "projectPath": "/Users/Nathan/Projects/Cubo/src/Cubo.Core/Cubo.Core.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.0": {
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.0.100/RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

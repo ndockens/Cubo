@@ -1,0 +1,8 @@
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/bin/Debug/netstandard2.0/Cubo.Core.deps.json
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/bin/Debug/netstandard2.0/Cubo.Core.dll
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/bin/Debug/netstandard2.0/Cubo.Core.pdb
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/obj/Debug/netstandard2.0/Cubo.Core.csprojAssemblyReference.cache
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/obj/Debug/netstandard2.0/Cubo.Core.AssemblyInfoInputs.cache
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/obj/Debug/netstandard2.0/Cubo.Core.AssemblyInfo.cs
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/obj/Debug/netstandard2.0/Cubo.Core.dll
+/Users/Nathan/Projects/Cubo/src/Cubo.Core/obj/Debug/netstandard2.0/Cubo.Core.pdb
