@@ -48,5 +48,10 @@ namespace Cubo.Core.Domain
 
             return item;
         }
+
+        public IEnumerable<string> GetKeys()
+        {
+            return _items.Select(x => x.Key);
+        }
     }
 }
