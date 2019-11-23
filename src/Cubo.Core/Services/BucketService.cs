@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using AutoMapper;
 using Cubo.Core.Repositories;
 using Cubo.Core.Domain;
 using Cubo.Core.DTOs;
@@ -11,21 +12,19 @@ namespace Cubo.Core.Services
     public class BucketService : IBucketService
     {
         private readonly IBucketRepository _repository;
-        public BucketService(IBucketRepository repository)
+        private readonly IMapper _mapper;
+
+        public BucketService(IBucketRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
 
         public async Task<BucketDTO> GetAsync(string bucketName)
         {
             var bucket = await _repository.GetAsyncOrFail(bucketName);
 
-            return new BucketDTO
-            {
-                Name = bucket.Name,
-                CreatedAt = bucket.CreatedAt,
-                Items = bucket.Items.Select(x => x.Key).ToList()
-            };
+            return _mapper.Map<BucketDTO>(bucket);
         }
 
         public async Task<IEnumerable<string>> GetNamesAsync()
