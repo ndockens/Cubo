@@ -1,8 +1,10 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 using Cubo.Core.Repositories;
 using Cubo.Core.Domain;
+using Cubo.Core.DTOs;
 
 namespace Cubo.Core.Services
 {
@@ -16,8 +18,14 @@ namespace Cubo.Core.Services
 
         public async Task<BucketDTO> GetAsync(string bucketName)
         {
-            var bucket = _repository.GetAsyncOrFail(bucketName);
-            return new BucketDTO(bucket);
+            var bucket = await _repository.GetAsyncOrFail(bucketName);
+
+            return new BucketDTO
+            {
+                Name = bucket.Name,
+                CreatedAt = bucket.CreatedAt,
+                Items = bucket.Items.Select(x => x.Key).ToList()
+            };
         }
 
         public async Task<IEnumerable<string>> GetNamesAsync()

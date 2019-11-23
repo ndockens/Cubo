@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text.Json;
 using Cubo.Core.Repositories;
 using Cubo.Core.Domain;
+using Cubo.Core.DTOs;
 
 namespace Cubo.Core.Services
 {
@@ -20,7 +21,12 @@ namespace Cubo.Core.Services
         {
             var bucket = await _repository.GetAsyncOrFail(bucketName);
             var item = bucket.GetItemOrFail(key);
-            return new ItemDTO(item);
+
+            return new ItemDTO
+            {
+                Key = item.Key,
+                Value = item.Value
+            };
         }
 
         public async Task<IEnumerable<string>> GetKeysAsync(string bucketName)

@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using System.Collections.Generic;
+using Cubo.Core.DTOs;
 
 namespace Cubo.Core.Services
 {
