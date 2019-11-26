@@ -8,4 +8,8 @@
     <ProjectReference Include="..\Cubo.Core\Cubo.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="automapper" Version="9.0.0" />
+  </ItemGroup>
+
 </Project>
