@@ -27,7 +27,7 @@ namespace Cubo.Core.Domain
             var fixedKey = key.ToLowerInvariant();
 
             if (Items.Any(x => x.Key == fixedKey))
-                throw new Exception($"Item: {key} already exists in bucket: {Name}");
+                throw new CuboException("item_already_exists");
 
             _items.Add(new Item(key, value));
         }
@@ -44,7 +44,7 @@ namespace Cubo.Core.Domain
             var item = Items.SingleOrDefault(x => x.Key == fixedKey);
 
             if (item == null)
-                throw new Exception($"Item: {key} could not be found in bucket: {Name}");
+                throw new CuboException("item_not_found");
 
             return item;
         }
