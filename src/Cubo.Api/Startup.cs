@@ -14,6 +14,7 @@ using AutoMapper;
 using Cubo.Core.Repositories;
 using Cubo.Core.Services;
 using Cubo.Core.Mappers;
+using Cubo.Api.Middleware;
 
 namespace Cubo.Api
 {
@@ -30,7 +31,7 @@ namespace Cubo.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddScoped<IBucketRepository, InMemoryBucketRepository>();
+            services.AddSingleton<IBucketRepository, InMemoryBucketRepository>();
             services.AddScoped<IBucketService, BucketService>();
             services.AddScoped<IItemService, ItemService>();
             services.AddSingleton<IMapper>(x => AutoMapperConfig.GetMapper());
@@ -49,6 +50,8 @@ namespace Cubo.Api
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseMiddleware<ErrorHandlerMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {

@@ -8,7 +8,11 @@ namespace Cubo.Core.Domain
     {
         private ISet<Item> _items = new HashSet<Item>();
         public string Name { get; protected set; }
-        public IEnumerable<Item> Items { get; protected set; }
+        public IEnumerable<Item> Items
+        {
+            get => _items;
+            set => _items = new HashSet<Item>();
+        }
         public DateTime CreatedAt { get; protected set; }
 
         protected Bucket()

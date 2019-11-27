@@ -31,11 +31,11 @@ namespace Cubo.Api.Controllers
             return Json(bucket);
         }
 
-        [HttpPost("")]
+        [HttpPost("{name}")]
         public async Task<IActionResult> Post(string name)
         {
             await _bucketService.AddAsync(name);
-            return Created("buckets/{name}", null);
+            return Created($"buckets/{name}", null);
         }
 
         [HttpDelete("{name}")]

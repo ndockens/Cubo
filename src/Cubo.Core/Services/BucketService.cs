@@ -34,11 +34,12 @@ namespace Cubo.Core.Services
 
         public async Task AddAsync(string bucketName)
         {
-            var bucket = new Bucket(Guid.NewGuid(), bucketName);
+            var bucket = await _repository.GetAsync(bucketName);
 
             if (bucket != null)
                 throw new CuboException("bucket_already_exists");
 
+            bucket = new Bucket(Guid.NewGuid(), bucketName);
             await _repository.AddAsync(bucket);
         }
 
