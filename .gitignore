@@ -23,6 +23,36 @@
 */[Bb]in/
 */[Oo]bj/
 */[Ll]og/
+src/Cubo.Api/[Dd]ebug/
+src/Cubo.Api/[Dd]ebugPublic/
+src/Cubo.Api/[Rr]elease/
+src/Cubo.Api/[Rr]eleases/
+src/Cubo.Api/x64/
+src/Cubo.Api/x86/
+src/Cubo.Api/bld/
+src/Cubo.Api/[Bb]in/
+src/Cubo.Api/[Oo]bj/
+src/Cubo.Api/[Ll]og/
+src/Cubo.Core/[Dd]ebug/
+src/Cubo.Core/[Dd]ebugPublic/
+src/Cubo.Core/[Rr]elease/
+src/Cubo.Core/[Rr]eleases/
+src/Cubo.Core/x64/
+src/Cubo.Core/x86/
+src/Cubo.Core/bld/
+src/Cubo.Core/[Bb]in/
+src/Cubo.Core/[Oo]bj/
+src/Cubo.Core/[Ll]og/
+tests/Cubo.Tests/[Dd]ebug/
+tests/Cubo.Tests/[Dd]ebugPublic/
+tests/Cubo.Tests/[Rr]elease/
+tests/Cubo.Tests/[Rr]eleases/
+tests/Cubo.Tests/x64/
+tests/Cubo.Tests/x86/
+tests/Cubo.Tests/bld/
+tests/Cubo.Tests/[Bb]in/
+tests/Cubo.Tests/[Oo]bj/
+tests/Cubo.Tests/[Ll]og/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
