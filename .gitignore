@@ -53,6 +53,16 @@ tests/Cubo.Tests/bld/
 tests/Cubo.Tests/[Bb]in/
 tests/Cubo.Tests/[Oo]bj/
 tests/Cubo.Tests/[Ll]og/
+tests/Cubo.Tests.EndToEnd/[Dd]ebug/
+tests/Cubo.Tests.EndToEnd/[Dd]ebugPublic/
+tests/Cubo.Tests.EndToEnd/[Rr]elease/
+tests/Cubo.Tests.EndToEnd/[Rr]eleases/
+tests/Cubo.Tests.EndToEnd/x64/
+tests/Cubo.Tests.EndToEnd/x86/
+tests/Cubo.Tests.EndToEnd/bld/
+tests/Cubo.Tests.EndToEnd/[Bb]in/
+tests/Cubo.Tests.EndToEnd/[Oo]bj/
+tests/Cubo.Tests.EndToEnd/[Ll]og/
 
 # Visual Studio 2015/2017 cache/options directory
 .vs/
