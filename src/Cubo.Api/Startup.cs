@@ -35,6 +35,7 @@ namespace Cubo.Api
             services.AddScoped<IBucketService, BucketService>();
             services.AddScoped<IItemService, ItemService>();
             services.AddSingleton<IMapper>(x => AutoMapperConfig.GetMapper());
+            services.AddSingleton<IDataInitializer, DataInitializer>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,6 +58,10 @@ namespace Cubo.Api
             {
                 endpoints.MapControllers();
             });
+
+            var dataInitializer = app.ApplicationServices.GetService<IDataInitializer>();
+
+            if (dataInitializer != null) dataInitializer.SeedAsync();
         }
     }
 }
