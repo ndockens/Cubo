@@ -2,6 +2,7 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "jquery": "2.2.0"
+    "jquery": "2.2.0",
+    "knockout": "3.4.2"
   }
 }
