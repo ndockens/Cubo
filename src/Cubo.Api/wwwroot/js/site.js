@@ -1,9 +1,9 @@
 $(function() {
-  init();
-
   init = function() {
     ko.applyBindings(new ViewModel());
   };
+
+  init();
 
   function ViewModel() {
     var self = this;
@@ -12,6 +12,14 @@ $(function() {
     self.bucketName = ko.observable("");
     self.itemKey = ko.observable("");
     self.itemValue = ko.observable("");
+
+    self.hasBucketName = ko.computed(function() {
+      return self.bucketName() !== "";
+    });
+
+    self.bucketSelected = ko.computed(function() {
+      return self.bucket().name() !== "";
+    });
 
     self.getBucket = function(bucketName) {
       $.get("api/buckets/" + bucketName, function(response) {
@@ -52,13 +60,13 @@ $(function() {
       });
     };
 
-    loadBuckets();
-
     loadBuckets = function() {
       $.get("api/buckets", function(response) {
         self.buckets(response);
       });
     };
+
+    loadBuckets();
   }
 
   function BucketViewModel(name, items) {
