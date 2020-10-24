@@ -42,6 +42,12 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
+          "dependencies": {
+            "automapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -104,6 +110,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "automapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "system.text.json": {
+              "target": "Package",
+              "version": "[4.6.0, )"
             }
           },
           "imports": [

@@ -8,4 +8,10 @@
     <ProjectReference Include="..\Cubo.Core\Cubo.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="automapper" Version="9.0.0" />
+    <PackageReference Include="buildbundlerminifier" Version="3.2.435" />
+    <PackageReference Include="microsoft.aspnetcore.staticfiles" Version="2.2.0" />
+  </ItemGroup>
+
 </Project>

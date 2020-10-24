@@ -19,3 +19,4 @@
 /Users/Nathan/Projects/Cubo/src/Cubo.Api/obj/Debug/netcoreapp3.0/Cubo.Api.csproj.CopyComplete
 /Users/Nathan/Projects/Cubo/src/Cubo.Api/obj/Debug/netcoreapp3.0/Cubo.Api.dll
 /Users/Nathan/Projects/Cubo/src/Cubo.Api/obj/Debug/netcoreapp3.0/Cubo.Api.pdb
+/Users/Nathan/Projects/Cubo/src/Cubo.Api/bin/Debug/netcoreapp3.0/AutoMapper.dll

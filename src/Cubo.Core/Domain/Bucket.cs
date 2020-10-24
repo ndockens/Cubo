@@ -8,7 +8,11 @@ namespace Cubo.Core.Domain
     {
         private ISet<Item> _items = new HashSet<Item>();
         public string Name { get; protected set; }
-        public IEnumerable<Item> Items { get; protected set; }
+        public IEnumerable<Item> Items
+        {
+            get => _items;
+            set => _items = new HashSet<Item>();
+        }
         public DateTime CreatedAt { get; protected set; }
 
         protected Bucket()
@@ -27,7 +31,7 @@ namespace Cubo.Core.Domain
             var fixedKey = key.ToLowerInvariant();
 
             if (Items.Any(x => x.Key == fixedKey))
-                throw new Exception($"Item: {key} already exists in bucket: {Name}");
+                throw new CuboException("item_already_exists");
 
             _items.Add(new Item(key, value));
         }
@@ -44,9 +48,14 @@ namespace Cubo.Core.Domain
             var item = Items.SingleOrDefault(x => x.Key == fixedKey);
 
             if (item == null)
-                throw new Exception($"Item: {key} could not be found in bucket: {Name}");
+                throw new CuboException("item_not_found");
 
             return item;
+        }
+
+        public IEnumerable<string> GetKeys()
+        {
+            return _items.Select(x => x.Key);
         }
     }
 }
